@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+<html lang="en" data-ng-app="Convert">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Currency Converter</title>
+
+    <link rel="stylesheet" media="screen" href="Content/bootstrap.min.css" />
+</head>
+
+<body>
+    <div class="container">
+        <div class="page-header">
+        </div>
+    </div>
+    <script src="Scripts/angular.min.js"></script>
+    <script src="Scripts/currency.js"></script>
+    
+   
+    <div class="row">
+
+        <div class="col-xs-5 col-sm-5 col-md-5 col-md-offset-3">
+            <div class="panel panel-default" data-ng-controller="currConverter">
+                <div class="panel-body">
+
+                    <form action="" method="POST" role="form">
+                        <legend> Currency Converter</legend>
+                        <div class="form-group">
+                            <label for="">Type in amount and select currency:</label>
+
+                        </div>
+                        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                            <div class="form-group">
+                                <input type="number" min="0" class="form-control" placeholder="Enter value" data-ng-model="fromValue" data-ng-change="currConvert()">
+
+                            </div>
+                        </div>
+
+                        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                            <div class="form-group">
+
+                                <select ng-model="fromType" class="form-control" required data-ng-change="currConvert()" ng-options="k for (k, v) in rates track by v"></select>
+
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="">Converted amount:</label>
+
+                        </div>
+                        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Enter value" data-ng-model="toValue" data-ng-change="currConvert()" readonly>
+                            </div>
+                        </div>
+                        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                            <div class="form-group">
+
+                                <select ng-model="toType" class="form-control" required data-ng-change="currConvert()" ng-options="k for (k, v) in rates track by v"></select>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                            <div class="text-right">
+                                <a href="http://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/index.en.html">Disclaimer</a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
