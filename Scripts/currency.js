@@ -7,8 +7,13 @@
             $scope.toType = $scope.rates.EUR;
             $scope.fromType = $scope.rates.USD;
             $scope.fromValue = 0.00;
+		$scope.myVar = false;
             $scope.currConvert();
+	
         });
+	$scope.toggle = function() {
+        $scope.myVar = !$scope.myVar;
+    		};
       $scope.currConvert = function () {
           $scope.toValue = $scope.fromValue * ($scope.toType * (1 / $scope.fromType));
           $scope.toValue = $scope.toValue;
