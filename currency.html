@@ -32,7 +32,7 @@
                         </div>
                         <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
                             <div class="form-group">
-                                <input type="number" min=0 onkeypress="return isNumberKey(event)"
+                                <input type="text" onkeypress="return validateFloatKeyPress(this,event);"
  class="form-control" placeholder="Enter value" data-ng-model="fromValue" data-ng-change="currConvert()">
 				
                             </div>
@@ -68,7 +68,6 @@
 				  <div class="wrapper">
 					<div class="text-left">
 				<i ng-show="myVar"><i>Information on this Web site is provided for user purpose only. <i><br>
- 					<i> Base Currency is INR<i><br>
  					<i> Currency rate may change<i><br></i>
 					</div>
   					</div>
