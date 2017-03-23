@@ -15,8 +15,10 @@
         $scope.myVar = !$scope.myVar;
     		};
       $scope.currConvert = function () {
+
           $scope.toValue = $scope.fromValue * ($scope.toType * (1 / $scope.fromType));
-          $scope.toValue = $scope.toValue.toFixed(2);;
+          $scope.toValue = $scope.toValue.toFixed(2);
+$scope.fromValue = $scope.fromValue.toFixed(2);
       };
   }]);
 function validateFloatKeyPress(el, evt) {
